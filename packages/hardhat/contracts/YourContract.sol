@@ -7,18 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract YourContract is Ownable {
 
-  event SetPurpose(address sender, string purpose);
-
-  string public purpose = "Building Unstoppable Apps!!!";
-
-  constructor() {
-    // what should we do on deploy?
-    // _transferOwnership(0xABCD);
-  }
-
-  function setPurpose(string memory newPurpose) public {
-      purpose = newPurpose;
-      console.log(msg.sender,"set purpose to",purpose);
-      emit SetPurpose(msg.sender, purpose);
+  constructor() public {
+    
   }
 }
